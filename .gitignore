@@ -1,0 +1,4 @@
+*.o
+*.user
+build-listapilha-Desktop-Debug/*.*
+*.autosave
