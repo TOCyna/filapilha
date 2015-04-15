@@ -3,3 +3,7 @@
 build-listapilha-Desktop-Debug/*.*
 *.autosave
 *.user.*
+build-listapilha-Desktop-Release/
+build-listapilha-Desktop-Release/*.*
+
+
