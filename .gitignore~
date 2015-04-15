@@ -1,5 +1,4 @@
 *.o
 *.user
-blackjack/build-listapilha-Desktop-Debug/Makefile
-blackjack/build-listapilha-Desktop-Debug/blackjack
+build-listapilha-Desktop-Debug/*.*
 *.autosave
