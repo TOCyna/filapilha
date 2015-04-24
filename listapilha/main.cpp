@@ -10,6 +10,7 @@ using namespace std;
 int main()
 {
    cout<<"===>>> Teste da fila 1 <<<==="<<endl;
+   cout << "Fim e e e e e Inicio\n";
    cout<<"\nPopulando fila1:";
    Fila<int> * fila = new Fila <int> ();
    for(int i=0;i<6;i++) fila->insert(i);
@@ -25,7 +26,7 @@ int main()
    cout<<"\n";
 
    cout<<"\n\n===>>> Teste da fila 2 <<<==="<<endl;
-
+   cout << "Inicio e e e e e Fim\n";
    Fila2<int>  * fila2 = new Fila2 <int>();
     cout<<"\nPopulando fila2:";
    for(int i=0;i<6;i++) fila2->insert(i);
@@ -34,7 +35,10 @@ int main()
    fila2->insert(6);
    fila2->print();
    cout<<"\nRemovendo da Fila2...\n";
-   fila2->remove();
+   cout << fila2->remove();
+   cout << fila2->remove();
+   cout << fila2->remove();
+   cout << fila2->remove();
    cout<<"\nFila2 final:";
    fila2->print();
    cout<<"\n";

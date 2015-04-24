@@ -29,7 +29,15 @@ void Fila2<T>::print_stack(stack<T> stackX){
 template <class T>
 void Fila2<T>::insert(T e)
 {
-    stackA.push(e);
+    if(!stackA.empty()){
+        T aux;
+        aux=stackA.top();
+        stackA.pop();
+        insert(e);
+        stackA.push(aux);
+    } else
+        stackA.push(e);
+    return;
 }
 
 template <class T>
@@ -39,45 +47,9 @@ void Fila2<T>::print()
 }
 
 template <class T>
-void Fila2<T>::first()
+T Fila2<T>::remove()
 {
-    T aux;
-    aux=stackA.top();
+    T aux = stackA.top();
     stackA.pop();
-    if(!stackA.empty()){
-        first();
-        stackA.push(aux);
-    }
-    return;
-
-    /*
-    if(stackA.size()==1){
-        T aux;
-        aux=stackA.top();
-        return aux;
-    }
-    else{
-        T aux;
-        aux=stackA.top();
-        stackA.pop();
-        if(stackA.size()==1){
-
-            stackA.push(aux);
-
-        }
-        return first();
-    }
-    */
-
-}
-/*
-4321
-3421
-3241
-3214
-*/
-template <class T>
-void Fila2<T>::remove()
-{
-    first();
+    return aux;
 }

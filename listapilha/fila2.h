@@ -14,7 +14,7 @@ private:
 public:
     Fila2();
     ~Fila2();
-    void remove();
+    T remove();
     void insert(T);
     void print(void);
     void first();
