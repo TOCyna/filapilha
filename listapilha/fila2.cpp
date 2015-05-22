@@ -1,8 +1,4 @@
 #include "fila2.h"
-#include <iostream>
-#include <stack>
-
-using namespace std;
 
 template <class T>
 
@@ -19,10 +15,10 @@ Fila2<T>::~Fila2()
 template <class T>
 void Fila2<T>::print_stack(stack<T> stackX){
     while(!stackX.empty()){
-        cout<<' '<<stackX.top();
+        cout << ' ' << stackX.top();
         stackX.pop();
     }
-    cout<<endl;
+    cout << endl;
 }
 
 
@@ -37,7 +33,6 @@ void Fila2<T>::insert(T e)
         stackA.push(aux);
     } else
         stackA.push(e);
-    return;
 }
 
 template <class T>
@@ -49,7 +44,10 @@ void Fila2<T>::print()
 template <class T>
 T Fila2<T>::remove()
 {
-    T aux = stackA.top();
-    stackA.pop();
-    return aux;
+    if(!stackA.empty()) {
+        T aux = stackA.top();
+        stackA.pop();
+        return aux;
+    }
+    return NULL;
 }

@@ -1,6 +1,7 @@
 #ifndef FILA_H
 #define FILA_H
 #include <stack>
+#include <iostream>
 
 using namespace std;
 

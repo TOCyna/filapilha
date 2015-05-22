@@ -1,8 +1,5 @@
-#include "Fila.h"
-#include <stack>
-#include <iostream>
+#include "fila.h"
 
-using namespace std;
 template <class T>
 
 Fila<T>::Fila()
@@ -12,24 +9,25 @@ Fila<T>::Fila()
 template <class T>
 T Fila<T>::remove()
 {
-
-    while(!stackF.empty()){
+    if(!stackF.empty()) {
         stackB.push(stackF.top());
         stackF.pop();
+        return stackB.top();
     }
-    T x =stackB.top();
-    stackB.pop();
-    while(!stackB.empty()){
-        stackF.push(stackB.top());
-        stackB.pop();
-    }
-    return x;
+    return NULL;
 }
 template <class T>
 void Fila<T>::insert(T e)
 {
+    while(!stackF.empty()){
+        stackB.push(stackF.top());
+        stackF.pop();
+    }
     stackF.push(e);
-
+    while(!stackB.empty()){
+        stackF.push(stackB.top());
+        stackB.pop();
+    }
 }
 template <class T>
 void Fila<T>::print_stack(stack<T> stackX){
